@@ -143,3 +143,175 @@ function main() {
 }
 
 main();
+
+/*
+OTHER FUNCTIONS THAT ARE NOT FOR THE ROCK PAPER SCISSORS
+
+*/
+
+let playersTurn = 1;
+
+function whosTurn(){
+    if(playersTurn%2 == 0){
+        return "X";
+    }
+    else{
+        return "O";
+    }
+}
+
+function getChoice(element){
+
+    let choice = document.getElementById(element.id);
+
+    if(document.getElementById(element.id).innerHTML == "X" ||
+       document.getElementById(element.id).innerHTML == "O" ){
+           console.log("Space taken");
+       }
+    else{
+        choice.innerHTML = whosTurn();
+    }
+}
+
+function tictacgame(selection){
+    playersTurn++;
+    getChoice(selection);
+
+    //This logic needs revision in case a player clicks twice 
+    if(playersTurn > 9){
+        console.log("Game over");
+    }else if(gameover()){
+        console.log("someoneWon");       
+    }
+    else {
+        console.log("keep playing");
+    }
+
+}
+
+function gameover(){
+
+    if( ((document.getElementById("1").innerHTML == "X")) == 
+         (document.getElementById("2").innerHTML == "X") && 
+         (document.getElementById("3").innerHTML == "X") )
+    {
+        console.log("First row win");
+        return true;
+    }
+    else if(((document.getElementById("4").innerHTML == "X")) == 
+    (document.getElementById("5").innerHTML == "X") && 
+    (document.getElementById("6").innerHTML == "X") )
+    {
+        console.log("Second row win");
+        return true;
+    }
+    else if(((document.getElementById("7").innerHTML == "X")) == 
+    (document.getElementById("8").innerHTML == "X") && 
+    (document.getElementById("9").innerHTML == "X") )
+    {
+        console.log("Third row win");
+        return true;
+    }
+    else if(((document.getElementById("1").innerHTML == "X")) == 
+    (document.getElementById("4").innerHTML == "X") && 
+    (document.getElementById("7").innerHTML == "X") )
+    {
+        console.log("First column win");
+        return true;
+    }
+    else if(((document.getElementById("2").innerHTML == "X")) == 
+    (document.getElementById("5").innerHTML == "X") && 
+    (document.getElementById("8").innerHTML == "X") )
+    {
+        console.log("Second column win");
+        return true;
+    }
+    else if(((document.getElementById("3").innerHTML == "X")) == 
+    (document.getElementById("6").innerHTML == "X") && 
+    (document.getElementById("9").innerHTML == "X") )
+    {
+        console.log("Third column win");
+        return true;
+    }
+    else if(((document.getElementById("1").innerHTML == "X")) == 
+    (document.getElementById("5").innerHTML == "X") && 
+    (document.getElementById("9").innerHTML == "X") )
+    {
+        console.log("Diagonal column win");
+        return true;
+    }
+    else if(((document.getElementById("3").innerHTML == "X")) == 
+    (document.getElementById("5").innerHTML == "X") && 
+    (document.getElementById("7").innerHTML == "X") )
+    {
+        console.log("Diagonal column win");
+        return true;
+    }
+
+        //////////////////////////////////////////////////////////////////////////
+
+
+    if( ((document.getElementById("1").innerHTML == "O")) == 
+         (document.getElementById("2").innerHTML == "O") && 
+         (document.getElementById("3").innerHTML == "O") )
+    {
+        console.log("First row win");
+        return true;
+    }
+    else if(((document.getElementById("4").innerHTML == "O")) == 
+    (document.getElementById("5").innerHTML == "O") && 
+    (document.getElementById("6").innerHTML == "O") )
+    {
+        console.log("Second row win");
+        return true;
+    }
+    else if(((document.getElementById("7").innerHTML == "O")) == 
+    (document.getElementById("8").innerHTML == "O") && 
+    (document.getElementById("9").innerHTML == "O") )
+    {
+        console.log("Third row win");
+        return true;
+    }
+    else if(((document.getElementById("1").innerHTML == "O")) == 
+    (document.getElementById("4").innerHTML == "O") && 
+    (document.getElementById("7").innerHTML == "O") )
+    {
+        console.log("First column win");
+        return true;
+    }
+    else if(((document.getElementById("2").innerHTML == "O")) == 
+    (document.getElementById("5").innerHTML == "O") && 
+    (document.getElementById("8").innerHTML == "O") )
+    {
+        console.log("Second column win");
+        return true;
+    }
+    else if(((document.getElementById("3").innerHTML == "O")) == 
+    (document.getElementById("6").innerHTML == "O") && 
+    (document.getElementById("9").innerHTML == "X") )
+    {
+        console.log("Third column win");
+        return true;
+    }
+    else if(((document.getElementById("1").innerHTML == "O")) == 
+    (document.getElementById("5").innerHTML == "O") && 
+    (document.getElementById("9").innerHTML == "O") )
+    {
+        console.log("Diagonal column win");
+        return true;
+    }
+    else if(((document.getElementById("3").innerHTML == "O")) == 
+    (document.getElementById("5").innerHTML == "O") && 
+    (document.getElementById("7").innerHTML == "O") )
+    {
+        console.log("Diagonal column win");
+        return true;
+    }
+
+
+
+
+    return false; 
+
+}
+

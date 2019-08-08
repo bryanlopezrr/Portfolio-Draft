@@ -15,17 +15,58 @@ header {
     padding: 20px; 
 }
 
-header > h1 {
+
+h1{
     color: #25272E;
     text-align: center;
     font-size: 60px;
     font-family: Asap, sans-serif; 
 }
 
+
+button {
+    color: #24272E;
+    background: #F8F9F9;  
+    padding: 18px 32px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Asap, sans-serif;
+    border-radius: 9%;
+
+}
+
+#home-button{
+    float: left;
+    text-align: center;
+    border: 4px solid #2390E0;
+    
+}
+#home-button:hover{
+    color: white;
+    background: #2390E0;
+}
+
+#option-button{
+    text-align: center;
+    border: 4px solid #4CAF50;
+    margin: 3px;
+}
+
+#option-button:hover{
+    color: white;
+    background-color: #4CAF50;
+}
+    
+#nav-pane{
+    padding: 10px;
+    text-align: center;
+}
+
 h2{
     font-family: Asap, sans-serif;
     color: white; 
     text-align: center;
+    margin-bottom: 250px;
 }
 
 .score-board{
@@ -79,7 +120,7 @@ h2{
     margin :50px 0px;
 }
 
-img{
+.choice > img{
     border-radius: 70%;
     width: 100px;
     height: 100px; 
@@ -112,4 +153,99 @@ img{
 
 .gray-glow{
     box-shadow: 0 0 25px #BEBEBE
+}
+
+/*STYLING FOR OTHER PAGE*/
+
+.all-content{
+    color: white;
+    font-family: Asap, sans-serif;
+    font-size: 23px;
+}
+
+#objectiveBio{
+    display: none;
+}
+
+
+#educationBio{
+    display: none;
+}
+
+#projectBio{
+    display: none;
+}
+
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 600px; 
+}
+
+#objectiveBio{
+    text-align: center;
+    padding: 5px;
+}
+
+#educationBio{
+    text-align: center;
+    padding: 5px;
+}
+
+
+input[type=text], textarea{
+    width: 100%;
+    padding: 12px;
+}
+
+
+#submit-button{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    height: 10px;
+    padding: 12px 20px;
+    background-color: #F78F33;
+    line-height: 0px;
+}
+
+#form-container{
+    border-radius: 10px;
+    
+    padding: 20px;
+
+    margin-top: 9500px;
+
+}
+
+textarea{
+    margin-bottom: 15px; 
+}
+
+
+#tictac{
+    background: white;
+    padding: 20px 20px;
+}
+
+td{
+    border: 2px solid white;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-family: Asap, sans-serif;
+    font-size: 50px;
+    cursor: pointer;
+    color : #E2584D;
+}
+
+#winner{
+    font-family: Asap, sans-serif;
+    color: white; 
+    text-align: center;
+    margin-bottom: 250px;
+    margin-top: 20px;
 }

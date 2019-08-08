@@ -1,13 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<title>Bryan's Home Page</title>
+
 </head>
+
+
 <body>
-    <h1>HOME PAGE</h1>
+
+    <header>
+        <h1 id="my_name">Bryan Lopez</h1>
+    </header>
+
+<div id="nav-pane">
+  <button id="option-button" onclick="showObj()">Objective</button>
+  <button id="option-button" onclick="showEdu()">Education</button>
+  <a href="index.html"><button id="option-button">Projects</button></a>
+  <a href="resume.pdf"><button id="option-button">Resume</button></a>
+  <button id="option-button" onclick="window.scrollTo(0,document.body.scrollHeight)">Contact</button>
+</div>
+
+<div>
+<img src="me1.jpg" id="home-picture">
+</div>
+
+<div class="all-content">
+    <div>
+        <p id="objectiveBio"><br>I'm a current Senior, Computer Science | Engineering student. </br>I'm
+        passionate and motivated, <b>always</b> looking for opportunites to learn new things,
+        <br>specially when it comes to computers and technology. <br>I hope to use that knowledge
+        to impact the world </br> </p>
+    </div>
+
+    <div>
+        <p id ="educationBio">
+            Hillsborough Community College, 3.90 GPA
+            <br>University of South Florida, 3.85 GPA</br>
+        </p>
+
+    </div>
+
+    <div>
+        <p id="projectBio">Projects will go here on a list or something</p>
+    </div>
+
+
+
+    <div id="form-container">
+        <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+            <label for="email">Email</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something..." style="height:150px"></textarea>
+
+            <button id="submit-button">Submit</button>
+
+        </form>
+    </div>
+
+</div>
+
+<script>
+
+$(document).ready( function(){
+    $('#home-picture').fadeOut(6500);
+});
+
+
+function showObj(){
+    $('#objectiveBio').fadeIn();
+}
+
+function showEdu(){
+$('#educationBio').fadeIn();
+}
+
+</script>
+
 
 </body>
+
+
 </html>

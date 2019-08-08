@@ -7,13 +7,13 @@
     </head>
     <body>
         <header>
-
-            <h1>
-                Rock Paper Scissors
-            
-            </h1>
+            <div>
+                <a href="home.html"><button id ="home-button" onclick="">Home</button></a>
+                <h1>
+                    Rock Paper Scissors
+                </h1>
+            </div>
         </header>
-
 
     <div class="choices">
         <div class="choice" id="r">
@@ -26,7 +26,6 @@
             <img src="paper.jpg">
         </div>
     </div>
-
 
     <div class="result">
             <p id="action-message">Make your move!</p>
@@ -42,10 +41,55 @@
     <h2>Scoreboard</h2>
 
 
+<!-- USEE IMAGES FOR THE TIC TAC TOEE GAME --> 
+
+    <div id="tictactoegame">
+        
+            <header style="margin-bottom: 100px">
+                    <div>
+                        <a href="home.html"><button id ="home-button" onclick="">Home</button></a>
+                        <h1>
+                            Tic-Tac-Toe
+                        </h1>
+                    </div>
+            </header>
+
+    <center>
+    <div id="thetable">
+        <table style="color:white;">
+            <tr>
+                <td id="1" onclick="tictacgame(this)"></td>
+                <td id="2" onclick="tictacgame(this)"></td>
+                <td id="3" onclick="tictacgame(this)"></td>
+            </tr>
+            <tr>                    
+                <td id="4" onclick="tictacgame(this)"></td>
+                <td id="5" onclick="tictacgame(this)"></td>
+                <td id="6" onclick="tictacgame(this)"></td>
+            </tr>
+            <tr>
+                <td id="7" onclick="tictacgame(this)"></td>
+                <td id="8" onclick="tictacgame(this)"></td>
+                <td id="9" onclick="tictacgame(this)"></td>
+            </tr>
+        </table>
+    </div>
+    </center>
+
+    </div>
+
+    <div id="winner">
+        <h2>The winner is : <span>Player 1</span></h2>
+
+    </div>
+
+
+
+
+
+
+
     <script src="app.js"  charset="utf-8"></script>
-
-
-
 
     </body>
 </html>
